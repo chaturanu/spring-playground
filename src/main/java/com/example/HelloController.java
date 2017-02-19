@@ -1,6 +1,8 @@
 package com.example;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,6 +17,16 @@ public class HelloController {
         return "Hello from Spring!";
     }
 
+
+    @PatchMapping("/patch")
+    public String getPatch() {
+        return "PATCH";
+    }
+
+    @DeleteMapping("/delete")
+    public String getDelete() {
+        return "DELETE";
+    }
 }
 
 
